@@ -453,9 +453,12 @@
     .modal-box {
       background: var(--bg-white);
       max-width: 860px; width: 100%;
+      max-height: 85vh;
       display: grid; grid-template-columns: 1.2fr 1fr;
       transform: scale(.94) translateY(20px);
       transition: transform .35s var(--ease);
+      border-radius: 4px;
+      overflow: hidden;
     }
     .modal-overlay.open .modal-box { transform: none; }
 
@@ -495,6 +498,8 @@
       padding: 48px 40px;
       display: flex; flex-direction: column;
       justify-content: space-between;
+      min-height: 0;
+      overflow-y: auto;
     }
     .modal-year {
       font-family: var(--font-disp); font-size: 12px;
@@ -509,6 +514,10 @@
     .modal-desc {
       font-family: var(--font-body);
       font-size: 16px; line-height: 1.75; color: #2a2826; flex: 1;
+      overflow-y: auto;
+      max-height: 40vh;
+      margin-bottom: 16px;
+      padding-right: 8px;
     }
     .modal-close {
       margin-top: 32px;
@@ -518,6 +527,7 @@
       color: var(--mid); cursor: pointer;
       transition: color .2s;
       background: none; border: none; padding: 0;
+      flex-shrink: 0;
     }
     .modal-close:hover { color: var(--black); }
 
@@ -674,6 +684,8 @@
       }
       .modal-box { grid-template-columns: 1fr; }
       .modal-img-ph { min-height: 200px; }
+      .modal-body { padding: 32px 24px; }
+      .modal-desc { max-height: 35vh; }
       footer { padding: 22px 28px; }
     }
     @media (max-width: 720px) {
@@ -902,14 +914,7 @@
     <div class="gi reveal delay-4"
          data-title="Менторство 2026"
          data-year="2025"
-         data-desc="Наразі я с частиною команди Okwine, де
-         кожен день — це подорож найкращими
-         виноградниками світу. Працюючи в цій мережі, я не просто вивчаю асортимент, а
-         розбираюся в найтонших тюансах:
-         Виноробство: Від особливостей терруару до секретів віфікації.
-         Міцний алкоголь: Вивчення історії, технологій виробництва та культури споживання елітних напоїв.
-         Гастрономічні поєднання: Мистецтво збору
-         ідеального напою, який підкреслить смак кожної страви.">
+         data-desc="Я частина команди Okwine. Поглиблюю знання про виноробство, міцні алкогольні напої та гастрономічні поєднання. Кожен день — це вивчення найкращих традицій світової індустрії гостинності та інтеграція їх в український контекст.">
       <img src="images/gallery-4.jpg" alt="Менторство 2026" width="600" height="800" loading="lazy" />
       <div class="gi-cap">2026 — Менторство</div>
       <div class="gi-zoom">⊕</div>
